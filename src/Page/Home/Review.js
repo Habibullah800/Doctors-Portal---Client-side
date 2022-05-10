@@ -9,7 +9,7 @@ const Review = ({ review }) => {
                     <div className=" flex items-center mt-4 ">
                         <div className="avatar">
                             <div className="w-16 rounded-full ring ring-primary ring-offset-base-100 mr-8">
-                                <img src={review.img} alt="picture" />
+                                <img src={review.pic} alt="pic" />
                             </div>
                         </div>
                         <div>
