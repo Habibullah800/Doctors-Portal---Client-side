@@ -11,7 +11,7 @@ const MakeAppoinment = () => {
             }}
             className='flex justify-center items-center mb-20 '>
             <div className='flex-1 hidden lg:block'>
-                <img className='mt-[-170px]' src={doctor} alt='doctor' />
+                <img className='mt-[-145px]' src={doctor} alt='doctor' />
             </div>
 
             <div className='flex-1'>
