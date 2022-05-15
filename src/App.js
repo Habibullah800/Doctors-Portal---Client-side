@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './Page/Shared/Navbar/Navbar';
 import { Route, Routes } from 'react-router-dom';
@@ -7,6 +6,9 @@ import About from './Page/About/About';
 import Login from './Page/Login/Login';
 import Footer from './Page/Shared/Footer/Footer';
 import Appoinment from './Page/Home/Appoinment/Appoinment';
+import SignUp from './Page/Login/SignUp';
+import RequireAuth from './Page/Login/RequireAuth';
+
 
 function App() {
   return (
@@ -15,9 +17,17 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Home></Home>}> </Route>
-        <Route path='/appoinment' element={<Appoinment></Appoinment>}> </Route>
+        <Route path='/appoinment' element=
+          {
+            <RequireAuth>
+              <Appoinment></Appoinment>
+            </RequireAuth>
+          }
+        > </Route>
         <Route path='/about' element={<About></About>}> </Route>
         <Route path='/login' element={<Login></Login>}> </Route>
+        <Route path='/signUp' element={<SignUp></SignUp>}> </Route>
+
       </Routes>
 
 
